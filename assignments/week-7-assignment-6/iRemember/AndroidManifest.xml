@@ -52,10 +52,13 @@
         <!-- THIS IS THE SOUND RECORD ACTIVITY -->
         <activity
             android:name="edu.vuum.mocca.ui.SoundRecordActivity"
-            android:label="@string/title_activity_sound_record">
-            <intent-filter> 										<!-- Line 56 -->
+            android:label="@string/title_activity_sound_record"
+            android:exported="false"> <!-- EDITED: explicitly set exported to false-->
+            <!-- EDITED: remove intent-filter so that no external app can launch this activity
+            <intent-filter> 										- Line 56 -
                 <action android:name="android.intent.action.TIMEZONE_CHANGED" />
             </intent-filter>
+            -->
         </activity>
         
     </application>
